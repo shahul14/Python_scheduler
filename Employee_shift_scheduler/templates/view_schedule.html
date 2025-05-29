@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Shift Schedule</h2>
+<table border="1">
+    <tr>
+        <th>Employee</th>
+        <th>Start Time</th>
+        <th>End Time</th>
+    </tr>
+    {% for shift in shifts %}
+    <tr>
+        <td>{{ shift.employee.name }}</td>
+        <td>{{ shift.start_time }}</td>
+        <td>{{ shift.end_time }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Assign Shift</h2>
+<form method="post">
+    <label>Employee:</label>
+    <select name="employee_id" required>
+        {% for emp in employees %}
+        <option value="{{ emp.id }}">{{ emp.name }}</option>
+        {% endfor %}
+    </select><br><br>
+    <label>Start Time:</label>
+    <input type="datetime-local" name="start_time" required><br><br>
+    <label>End Time:</label>
+    <input type="datetime-local" name="end_time" required><br><br>
+    <input type="submit" value="Assign Shift">
+</form>
+{% endblock %}

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Shift Scheduler</title>
+</head>
+<body>
+    <h1>Employee Shift Scheduler</h1>
+    <nav>
+        <a href="{{ url_for('index') }}">Home</a> |
+        <a href="{{ url_for('add_employee') }}">Add Employee</a> |
+        <a href="{{ url_for('assign_shift') }}">Assign Shift</a> |
+        <a href="{{ url_for('view_schedule') }}">View Schedule</a> |
+	<a href="{{ url_for('auto_generate_shifts') }}">Auto-Fill Yearly Shifts</a>
+    </nav>
+    <hr>
+    {% block content %}{% endblock %}
+</body>
+</html>
